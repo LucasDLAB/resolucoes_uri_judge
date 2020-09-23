@@ -133,7 +133,111 @@ print(f'RETANGULO: {RETANGULO:.3f}')
 '''
 
 #Resolução 1013
-''
+'''
 num=[int(i) for i in input().split() ]
-print(max(num))
+print(f'max(num) eh maior')
+'''
+
+#Resolução 1014
+'''
+X=int(input())
+Y=float(input())
+c=X/Y
+print(f'{c:.3f} km/l')
+'''
+
+#Resolução 1015
+'''
+num1=[float(i) for i in input().split()]
+num2=[float(i) for i in input().split()]
+D=((num2[0]-num1[0])**2)+(num2[1]-num1[1])**2
+D=pow(D,1/2)
+print(f'{D:.4f}')
+'''
+#Resolução 1016
+'''
+x = int(input())
+result = x*2
+print(f'{result} minutos')
+'''
+
+#Resolução 1017
+'''
+h=int(input())
+v=int(input())
+cc=(h*v/12)
+print(f'{cc:.3f}')
+'''
+
+#Resolução 1018
+'''
+N=int(input())
+print(N)
+for c in (100,50,20,10,5,2,1):
+	notas=0
+	if N>=c:
+		notas=(N//c)
+	print(f'{notas} nota(s) de R$ {c},00')
+	N-=notas*c
+'''
+#Resolução 1019
+'''
+n=(input())
+h=m=s=0
+for c in range (1,n+1):
+	s+=1
+	if s==60:
+		s=0
+		m+=1
+		if m==60:
+			m=0
+			h+=1
+print(f'{h}:{m}:{s}')
+'''
+
+#Resolução 1020
+'''
+n=int(input())
+a=0
+m=0
+if n>=365:
+	a=n//365
+	n-=a*365
+if n>=30:
+	m=n//30
+	n-=m*30
+print(f'{a} ano(s)')
+print(f'{m} mes(es)')
+print(f'{n} dia(s)')
+'''
+#Resolução 1021
+'''
+N=float(input())
+print(N)
+print('NOTAS:')
+for c in (100.00,50.0,20.0,10.0,5.0,2.0):
+	notas=0
+	if N>=c:
+		notas=(N//c)
+	print(f'{notas:.0f} nota(s) de R$ {c:.2f}')
+	N-=notas*c
+	N=round(N,2)
+N=N*100
+print('MOEDAS:')
+for c in (1,0.50,0.25,0.10,0.05,0.01):
+	notas=0
+	if N>=c:
+		notas=(N//(c*100))
+	print(f'{notas:.0f} moeda(s) de R$ {c:.2f}')
+	N-=notas*(c*100)
+	N=round(N,2)
+'''
+
+#Resolução 1035
+n=[float(i) for i in input().split()]
+if n[1]>n[2] and n[3]>n[0] and (n[2]+n[3])>(n[0]+n[1]) and n[2]>0 and n[3]>0 and n[0]%2==0:
+    print('Valores aceitos')
+else:
+    print('Valores nao aceitos')
+
 
