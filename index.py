@@ -234,10 +234,47 @@ for c in (1,0.50,0.25,0.10,0.05,0.01):
 '''
 
 #Resolução 1035
+'''
 n=[float(i) for i in input().split()]
 if n[1]>n[2] and n[3]>n[0] and (n[2]+n[3])>(n[0]+n[1]) and n[2]>0 and n[3]>0 and n[0]%2==0:
     print('Valores aceitos')
 else:
     print('Valores nao aceitos')
+'''
+
+#Resolução 1036
+'''
+n=[float(i) for i in input().split()]
+D=(n[1]**2)-4*n[0]*n[2]
+if D<0 or n[0]==0:
+	print('Impossível calcular')
+else:
+	r1=((-1*n[1])+ (pow(D,1/2)))/(2*n[0])
+	r2=((-1*n[1])- (pow(D,1/2)))/(2*n[0])
+	print(f'R1={r1}')
+	print(f'R2={r2}')
+'''
 
 
+#Resolução 1037
+'''
+n= float(input())
+lista=[[0,25],[25,50],[50,75],[75,100]]
+cont=0
+while True:
+	if cont==4:
+		break
+	if cont==0:
+		if lista[cont][0]<=n and n<=lista[cont][1]:
+			break	
+	else:	
+		if n>lista[cont][0] and n<=lista[cont][1]:
+			break
+	cont+=1
+if cont==0:
+	print(f"Intervalo [{lista[cont][0]},{lista[cont][1]}]")		
+elif cont>=1 and cont<=3:
+	print(f"Intervalo ({lista[cont][0]},{lista[cont][1]}]")
+elif cont==4:
+	print('Fora de intervalo')
+'''
