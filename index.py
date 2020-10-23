@@ -278,3 +278,399 @@ elif cont>=1 and cont<=3:
 elif cont==4:
 	print('Fora de intervalo')
 '''
+
+#Resolução 1074
+'''
+n=int(input())
+if n==0:
+    print('NULL')
+elif n%2==0 and n!=0:
+    print('EVEN ',end='')
+elif n%2==1:
+    print('ODD ',end='')
+if n>0:
+    print('POSITIVE')
+if n<0:
+    print('NEGATIVE')
+'''
+
+#Resolução 1075
+'''
+n=int(input())
+for c in range (1,10001):
+	if c%13==2:
+		print(c)
+'''
+
+#Resolução 1078
+'''
+n=int(input())
+for c in range (1,11):
+	print(f'{c} x {n} = {c*n}')
+'''
+
+#	Resolução 1079
+'''
+n=int(input())
+med=0
+for c in range (0,n):
+	m=[float(i) for i in input().split()]
+	for a in range (0,len(m)):
+		if a==0:
+			med=m[a]*2
+		elif a==1:
+			med+=m[a]*3
+		elif a==2:	
+			med+=m[a]*5
+	med=med/10
+	print(f'{med:.1f}')	
+'''
+
+#Resolução 1080
+'''
+l=[]
+for c in range (0,99):
+	n=int(input())
+	l.append(n)
+print('Maior: ',max(l))
+print('Posição: ',(l.index(max(l))+1)) 
+'''
+
+#Resolução 1094
+'''
+n=int(input())
+t=0
+tc=0
+tr=0
+ts=0
+for c in range (0,n):
+	e=[str(i) for i in input() .split()]
+	e[0]=int(e[0])
+	t+=e[0]
+	if e[1]in'Cc':
+		tc+=e[0]
+	elif e[1]in'Rr':
+		tr+=e[0]
+	elif e[1]in'Ss':
+		ts+=e[0]
+print(f'Total: {t} cobaias')
+print(f'Total de coelhos: {tc}')
+print(f'Total de ratos: {tr}')
+print(f'Total de sapos: {ts}')
+print(f'Percentual de coelhos: {tc/t*100:.2f}%')
+print(f'Percentual de ratos: {tr/t*100:.2f}%')
+print(f'Percentual de sapos: {ts/t*100:.2f}%')
+'''
+
+#Resolução 1095
+'''
+i=1
+j=60
+print(f'I={i} J={j}')
+while j!=0:
+	i+=3
+	j-=5
+	print(f'I={i} J={j}')
+'''
+
+#Resolução 1096
+'''
+i=1
+while i<10:
+	j=7
+	for c in range (0,3):
+		print(f'I={i} J={j}')
+		j-=1
+	i+=2
+'''
+
+#Resolução 1097
+'''
+i=1
+j=7
+while i<10:
+	for c in range (0,3):
+		print(f'I={i} J={j}')
+		j-=1
+	j+=5
+	i+=2
+'''
+
+#Resolução 1098
+'''
+i=0
+j=1
+while i<=2:
+	for c in range (0,3):
+		print(f'I={i:.1f} J={j:.1f}')
+		j+=1
+	j-=3
+	j+=0.2
+	i+=0.2
+'''
+
+#Resolução 1099
+'''
+n=int(input())
+for c in range (0,n):
+	si=0
+	num=[int(c) for c in input() .split()]
+	if num[0]>num[1]:
+		for c in range (num[1]+1,num[0]):
+			if c%2==1:
+				si+=c
+	else:
+		for c in range (num[0]+1,num[1]):
+			if c%2==1:
+				si+=c
+	print(si)
+'''
+
+#Resolução 1101
+'''
+while True:
+	s=0
+	num=[int(c) for c in input() .split()]
+	if 0 in num:
+		break
+	if num[0]>num[1]:
+		for c in range (num[1],num[0]+1):
+				s+=c
+	else:
+		for c in range (num[0],num[1]+1):
+				s+=c
+	print(s)
+'''
+
+#Resolução 1113
+'''
+while True:
+	s=0
+	num=[int(c) for c in input() .split()]
+	if num[0]==num[1]:
+		break
+	if num[0]<num[1]:
+		print('Crescente')
+	else:
+		print('Decrescente')
+'''
+
+#Resolução 1114
+'''
+while True:
+	s=input()
+	if s=="2002":
+		print('Acesso permitido')
+		break
+	else:
+		print('Senha Inválida')
+'''
+
+#Resolução 1115
+'''
+while True:
+	num=[int(c) for c in input() .split()]
+	if num[0]>0 and num[1]>0:
+		print('Primeiro')
+	elif num[0]<0 and num[1]>0:
+		print('Segundo')
+	elif num[0]<0 and num[1]<0:
+		print('Terceiro')
+	elif num[0]>0 and num[1]<0:
+		print('Quarto')
+	else:
+		print('Nulo')
+		break
+'''
+
+#Resolução 1116
+'''
+n=int(input())
+for c in range (0,n):
+	num=[int(i) for i in input() .split()]
+	if num[1]!=0:
+		print(num[0]/num[1])
+	else:
+		print('Divisão impossível')
+'''
+
+#Resolução 1117
+'''
+while True:
+	n1=float(input())
+	if n1>=0 and n1<=10:
+		break
+	else:
+		print('Senha inválida')
+while True:
+	n2=float(input())
+	if n2>=0 and n2<=10:
+		break
+	else:
+		print('Senha inválida')
+print(f'Média: {(n1+n2)/2}')
+'''
+
+#Resolução 1118
+'''
+while True:
+	while True:
+		n1=float(input())
+		if n1>=0 and n1<=10:
+			break
+		else:
+			print('Senha inválida')
+	while True:
+		n2=float(input())
+		if n2>=0 and n2<=10:
+			break
+		else:
+			print('Senha inválida')
+	print(f'Média: {(n1+n2)/2}')
+	while True:
+		print('Novo calcúlo? [1-sim/2-não]')
+		x=int(input())
+		if x==1 or x==2:
+			break
+	if x==2:
+		break
+'''
+
+#Resolução 1131
+'''
+t1=t2=e=0
+while True:
+	num=[int(i) for i in input() .split()]
+	if num[0]>num[1]:
+		t1+=1
+	elif num[1]>num[0]:
+		t2+=1
+	else:
+		e+=1	
+	while True:
+		print('Novo grenal? [1-sim/2-não]')
+		x=int(input())
+		if x==1 or x==2:
+			break
+	if x==2:
+		break
+print(f'Time 1:{t1}')
+print(f'Time 2:{t2}')
+print(f'Empate:{e}')
+if t1>t2:
+	print('Time 1 venceu mais')
+elif t1<t2:
+	print('Time 2 venceu mais')
+else:
+	print('Os times tem a mesma pontução')
+'''
+
+#Resolução 1132
+'''
+n1=int(input())
+n2=int(input())
+s=0
+if n1>n2:
+	for c in range (n2,n1+1):
+		if c%13==1:
+			s+=c
+else:
+	for c in range (n1,n2+1):
+		if c%13!=0:
+			s+=c
+print(s)
+'''
+
+#Resolução 1133
+'''
+n1=int(input())
+n2=int(input())
+if n1>n2:
+	for c in range (n2,n1):
+		if c%5==2 or c%5==3:
+			print(c)
+else:
+	for c in range (n1,n2):
+		if c%5==2 or c%5==3:
+			print(c)
+'''
+
+#Resolução 1134
+'''
+A=D=G=0
+while True:
+	while True:
+		e=int(input())
+		if e<=4 and e>0:
+			break
+	if e==1:
+		A+=1
+	elif e==2:
+		G+=1
+	elif e==3:
+		D+=1
+	else:
+		break
+print('Muito obrigado!!!')
+print(f'Alcool:{A}')
+print(f'Gasolina:{G}')
+print(f'Diesel:{D}')
+'''
+
+#Resolução 1142
+'''
+v=int(input())
+n=0
+for c in range (0,v):
+	n+=1
+	for a in range (0,3):
+		print(n,end=' ')
+		n+=1
+	print('PUM')	
+'''
+
+#Resolução 1143
+'''
+v=int(input())
+n=1
+for c in range (1,v+1):
+	print(f'{c} {c**2} {c**3}')
+'''
+
+#Resolução 1144
+'''
+n2=n3=1
+v=int(input())
+t=1
+s=0
+for c in range (1,v+1):
+	print(f'{c} {n2} {n2*c}')
+	print(f'{c} {n2+1} {n2*c+1}')
+	n2+=1
+	n3+=1
+	s+=2
+	if t==1:
+		n2+=s
+'''
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
